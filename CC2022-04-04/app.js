@@ -1,9 +1,11 @@
+// Multiply
 // This code does not execute properly. Try to figure out why.
 // WHY WHO R U?
 function multiply(a, b) {
     return a * b
 }
 
+// Multiples of 3 or 5
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. 
 // Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
 // Additionally, if the number is negative, return 0 (for languages that do have them).
@@ -18,6 +20,7 @@ function solution(number) {
     return sum
 }
 
+// Vowel Count
 // Return the number (count) of vowels in the given string.
 // We will consider a, e, i, o, u as vowels for this Kata (but not y).
 // The input string will only consist of lower case letters and/or spaces.
@@ -35,4 +38,3 @@ function getCount(str) {
     }
     return vowelsCount;
 }
-
