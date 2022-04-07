@@ -1,3 +1,4 @@
+// Who likes it?
 // You probably know the "like" system from Facebook and other pages. 
 // People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 // Implement the function which takes an array containing the names of people that like an item. 
@@ -34,6 +35,7 @@ function likes(names) {
 // }
 
 
+// Find the odd int
 // Given an array of integers, find the one that appears an odd number of times.
 // There will always be only one integer that appears an odd number of times.
 // [7] should return 7, because it occurs 1 time (which is odd).
@@ -55,6 +57,7 @@ function findOdd(A) {
     }
 }
 
+// Square Every Digit
 // Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
 // For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
 // Note: The function accepts an integer and returns an integer
