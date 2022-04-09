@@ -31,5 +31,26 @@ var isSquare = function (n) {
 // If a value is present in b, all of its occurrences must be removed from the other:
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 function arrayDiff(a, b) {
-    
+    for (i = 0; i < a.length; i++) {
+        for (j = 0; j < b.length; j++) {
+            if (a[i] === b[j]) {
+                a.splice(i, i + 1);
+            }
+        }
+    }
+    return a
+}
+
+// Descending Order
+// Your task is to make a function that can take any non-negative integer as an argument and
+// return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+// Examples:
+// Input: 42145 Output: 54421
+// Input: 145263 Output: 654321
+// Input: 123456789 Output: 987654321
+function descendingOrder(n) {
+    let arr = String(n).split('')
+    let sortedArr = arr.sort((a, b) => b - a)
+    let num = sortedArr.join('')
+    return Number(num)
 }
