@@ -37,5 +37,13 @@ function opposite(number) {
 // #Output
 // The middle character(s) of the word represented as a string.
 function getMiddle(s) {
-    
+    let arr = s.split('')
+    if (arr.length % 2 === 0) {
+        return `${arr[(arr.length / 2) - 1]}${arr[(arr.length / 2)]}`
+    } else if (arr.length % 2 === 1) {
+        let temp = Math.floor(arr.length / 2)
+        return `${arr[temp]}`
+    } else {
+        return s
+    }
 }
