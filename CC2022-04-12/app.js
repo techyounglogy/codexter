@@ -25,6 +25,13 @@ function findShort(s) {
     }
     return smallest.length;
 }
+// function findShort(s) {
+//     const strArr = s.split(' ');                    //   convert string to array
+//     const lengthOfWords = strArr.map(string => {    //   loop through array and find length
+//         return (string.length);
+//     })
+//     return Math.min(...lengthOfWords);              //   output length of shortest string
+// }
 
 // Exes and Ohs
 // Check to see if a string has the same amount of 'x's and 'o's. 
