@@ -55,3 +55,8 @@ function XO(str) {
     }
     return (xCount === oCount ? true : false);
 }
+// cleaver answer
+// const XO = str => {
+//     str = str.toLowerCase().split('');
+//     return str.filter(x => x === 'x').length === str.filter(x => x === 'o').length;
+// }
