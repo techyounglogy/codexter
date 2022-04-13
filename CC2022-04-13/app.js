@@ -42,5 +42,18 @@ function makeNegative(num) {
 // [160, 3, 1719, 19, 11, 13, -21]
 // Should return: 160 (the only even number)
 function findOutlier(integers) {
-    
+    let oddA = []
+    let evenA = []
+    for (i = 0; i < integers.length; i++) {
+        if (integers[i] % 2 === 0) {
+            evenA.push(integers[i])
+        } else {
+            oddA.push(integers[i])
+        }
+    }
+    if (oddA.length > evenA.length) {
+        return evenA[0]
+    } else if (oddA.length < evenA.length) {
+        return oddA[0]
+    }
 }
