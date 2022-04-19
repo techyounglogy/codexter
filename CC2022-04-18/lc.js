@@ -40,3 +40,16 @@ var twoSum = function (nums, target) {
     }
     return result;
 }
+
+// NOT OPTIMAL SOLUTION:
+
+// var twoSum = function (nums, target) {
+//     for (i = 0; i < nums.length; i++) {
+//         for (j = i + 1; j < nums.length; j++) {
+//             let sum = nums[i] + nums[j]
+//             if (sum === target) {
+//                 return [i, j]
+//             }
+//         }
+//     }
+// }
