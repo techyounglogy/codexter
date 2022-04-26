@@ -4,7 +4,7 @@
 
 // Increment the large integer by one and return the resulting array of digits.
 
- 
+
 
 // Example 1:
 
@@ -27,3 +27,17 @@
 // Explanation: The array represents the integer 9.
 // Incrementing by one gives 9 + 1 = 10.
 // Thus, the result should be [1,0].
+
+var plusOne = function (digits) {
+    var i = digits.length - 1;
+    var val = 0;
+    var carry = 1;
+    while (i >= 0 && carry) {
+        val = digits[i] + carry;
+        carry = Math.floor(val / 10);
+        digits[i] = val % 10;
+        i--;
+    }
+    if (carry) digits.unshift(carry);
+    return digits;
+};
