@@ -14,17 +14,27 @@
 // containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). 
 // It will never give you an empty array (that's not a walk, that's standing still!).
 
+// easy solution
+// function isValidWalk(walk) {
+//     let ns = 0, ew = 0;
+//     if (walk.length === 10) {
+//         for (let i of walk) {
+//             if (i == 'n') ns += 1;
+//             if (i == 's') ns -= 1;
+//             if (i == 'e') ew += 1;
+//             if (i == 'w') ew -= 1;
+//         }
+//     }
+//     else
+//         return false
+//     return ns === 0 && ew === 0;
+// }
+
+// cleaver solution
 function isValidWalk(walk) {
-    let ns = 0, ew = 0;
-    if (walk.length === 10) {
-        for (let i of walk) {
-            if (i == 'n') ns += 1;
-            if (i == 's') ns -= 1;
-            if (i == 'e') ew += 1;
-            if (i == 'w') ew -= 1;
-        }
-    }
-    else
-        return false
-    return ns === 0 && ew === 0;
+    const north = walk.filter(item => { return item === "n" }).length;
+    const south = walk.filter(item => { return item === "s" }).length;
+    const east = walk.filter(item => { return item === "e" }).length;
+    const west = walk.filter(item => { return item === "w" }).length;
+    return walk.length === 10 && north === south && east === west;
 }
