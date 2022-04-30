@@ -10,3 +10,11 @@
 // 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
 // 4 --> 0 (because 4 is already a one-digit number)
 
+function persistence(num) {
+    let i = 0;
+    while (num.toString().length !== 1) {
+        num = num.toString().split("").reduce((a, b) => a * b);
+        i++;
+    }
+    return i;
+}
