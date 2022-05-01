@@ -20,3 +20,11 @@
 // "Nananananananananananananananana Batman!"
 // -->
 // "####################################man!"
+
+function maskify(cc) {
+    let ccArr = cc.split('')
+    for (i = 0; i < ccArr.length - 4; i++) {
+        ccArr[i] = '#'
+    }
+    return ccArr.join('')
+}
