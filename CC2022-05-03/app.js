@@ -23,3 +23,6 @@ function noSpace(x) {
 
 // Hint: Don't forget to check for bad values like null/undefined
 
+function countSheeps(arrayOfSheeps) {
+    return arrayOfSheeps.filter(Boolean).length;
+}
