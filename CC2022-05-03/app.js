@@ -60,15 +60,26 @@ function countSheeps(arrayOfSheeps) {
 // if the parameter percent is 2 you have to convert it to 0.02.
 
 // Long Solution
-function nbYear(p0, percent, aug, p) {
-    const percentage = percent / 100
-    let result = p0
-    let years = 0
+function nbYear(numbers) {
+    var p0 = parseInt(numbers[0]);
+    var percent = parseInt(numbers[1]);
+    var aug = parseInt(numbers[2]);
+    var p = parseInt(numbers[3]);
 
-    while (result < p) {
-        result += result * percentage + aug
-        years++
+    for (var y = 0; p0 < p; y++) {
+        p0 += ((p0 * (percent / 100)) + aug);
     }
 
-    return years
+    return y + " years";
 }
+
+// Short Solution
+
+const nbYear = (p0, percent, aug, p) => {
+    let y = 0
+    for (y; p0 < p; y++) p0 = p0 * (1 + percent / 100) + aug
+    return y
+}
+
+// Function Export
+module.exports = nbYear
