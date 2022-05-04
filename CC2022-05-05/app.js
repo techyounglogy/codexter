@@ -22,3 +22,12 @@ function isTriangle(a, b, c) {
 // friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
 // Note: keep the original order of the names in the output.
 
+function friend(friends) {
+    let newArr = [];
+    for (i = 0; i < friends.length; i++) {
+        if (friends[i].length === 4) {
+            newArr.push(friends[i]);
+        }
+    }
+    return newArr;
+}
