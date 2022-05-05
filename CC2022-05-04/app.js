@@ -8,3 +8,13 @@
 // "the-stealth-warrior" gets converted to "theStealthWarrior"
 // "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
 
+function toCamelCase(str) {
+    let strArr = str.split('')
+    for (i = 0; i < strArr.length; i++) {
+        if (strArr[i] === '-' || strArr[i] === '_') {
+            strArr[i] = strArr[i + 1].toUpperCase()
+            strArr.splice(i + 1, 1)
+        }
+    }
+    return strArr.join('')
+}
