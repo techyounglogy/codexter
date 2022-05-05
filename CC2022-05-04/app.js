@@ -46,6 +46,9 @@ function toCamelCase(str) {
 // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 // ""  -->  ""
 
+// cleaver solution
+// The Solution use regex.
+// regex \d sort number 0–9.
 function order(words) {
     return words.split(' ').sort(function (a, b) {
         return a.match(/\d/) - b.match(/\d/);
