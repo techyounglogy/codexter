@@ -21,8 +21,13 @@ function toCamelCase(str) {
 
 // cleaver solution
 function toCamelCase(str) {
+    // \w finds all word characters
+    // [ -_]  match all the dashes and underscores
+    // ig is ignore case and g is global search
     var regExp = /[-_]\w/ig;
     return str.replace(regExp, function (match) {
+        //we're grabbing the second character at index 1 and transforming that to uppercase to replace the dash or 
+        //underscore the preceded it
         return match.charAt(1).toUpperCase();
     })
 }
