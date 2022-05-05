@@ -5,3 +5,7 @@
 // Examples
 // pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
 // pigIt('Hello world !');     // elloHay orldway !
+
+function pigIt(str) {
+    return str.split(' ').map(e => e.substr(1) + e[0] + 'ay').join(' ')
+}
