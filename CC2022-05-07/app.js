@@ -30,3 +30,4 @@ function pigIt(str) {
                 : word
         })
         .join(' ')
+}
