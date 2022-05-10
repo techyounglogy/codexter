@@ -12,3 +12,13 @@
 // 121 --> 144
 // 625 --> 676
 // 114 --> -1 since 114 is not a perfect square
+
+function findNextSquare(sq) {
+    let squareRoot = Math.sqrt(sq)
+    if (squareRoot % 1 === 0) {
+        return (squareRoot + 1) * (squareRoot + 1)
+    }
+    if (squareRoot % 1 != 0) {
+        return -1
+    }
+}
